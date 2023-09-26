@@ -1,6 +1,6 @@
 <script>
   import { page } from "$app/stores"
-  $: isActive = $page.path === $$props.href
+  $: isActive = $page.url.pathname === $$props.href
 </script>
 
 <!-- svelte-ignore a11y-missing-attribute -->

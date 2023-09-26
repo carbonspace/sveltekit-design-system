@@ -347,7 +347,7 @@
             <span class="swatch-secondary">Blue-600</span>
           </div>
         </div>
-<!--         {#each brandColors as { id, name, hex, rgb}, i }
+        <!-- {#each brandColors as { id, name, hex, rgb}, i }
         <span class="token-wrap{i == 5 || i == 15 ? ' border' : ''}">
           <div class="color-item" style="background: rgb({rgb})"></div>
           <div class="color-name">{name}</div>
