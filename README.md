@@ -4,6 +4,33 @@ This sveltekit design system is a collection of reusable design patterns, rules,
 
 > In order to quickly iterate with confidence, design teams need access to a single source of truth that allows for a scalable UI language and streamlined UX guidelines. -[Jess Thomas](https://www.invisionapp.com/inside-design/scale-design-systems/)
 
+## Quick Start
+
+### Clone the project and install dependencies:
+
+```bash
+git clone https://github.com/carbonspace/sveltekit-design-system.git
+
+cd svelte-design-system
+
+npm install
+
+# or
+pnpm install
+
+# or
+yarn
+```
+
+### Start a development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
 ## Why use a design system?
 
 A comprehensive guide to design systems [InvisionApp](https://www.invisionapp.com/inside-design/guide-to-design-systems/)
@@ -62,8 +89,11 @@ This step is important. Documentation and standards are what separate a pattern 
 > Before beginning work on your design system, take a moment to think about the team you’ll need to bring it to life. Who needs to be involved? Spoiler alert! You’re going to need more than just designers.<br>**- Jina Anne**, *design systems advocate and former lead designer at Salesforce*
 
 <hr>
+<hr>
 
-## create-svelte
+# Roll Your Own
+
+## Built with create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
