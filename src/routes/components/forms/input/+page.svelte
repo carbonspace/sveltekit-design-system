@@ -1,14 +1,27 @@
+<script>
+	import Inputs from "$lib/patterns/forms/Inputs.svelte";
+</script>
+
 <svelte:head>
-	<title>Input Elements</title>
+	<title>Inputs</title>
 	<meta name="description" content="About this app" />
 </svelte:head>
 
-<div class="text-column">
-	<h1>Input Field Elements go here</h1>
+<section class="hero is-hero-bar">
+  <div class="hero-body">
+    <div class="level">
+      <div class="level-left">
+        <div class="level-item">
+          <h1 class="title">Inputs</h1>
+        </div>
+      </div>
+      <div class="level-right" style="display: none;">
+        <div class="level-item" />
+      </div>
+    </div>
+  </div>
+</section>
 
-
-</div>
-
-<style>
-	
-</style>
+<section class="section is-component-section">
+  <Inputs />
+</section>
