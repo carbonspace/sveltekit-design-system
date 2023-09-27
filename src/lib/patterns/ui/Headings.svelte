@@ -1,6 +1,6 @@
 <script lang="ts">
 	import CardFooter from "$lib/CardFooter.svelte";
-  let showHeadings = true
+  let showCardContents = true
   
   // Headings
   const codeHTML = `<h1>H1 Headline H1</h1>
@@ -52,16 +52,22 @@ h6 {
 
 <!-- Headings -->
 <div class="card">
-  <header class="card-header">
+  <header 
+    class="card-header" 
+    role="button" 
+    on:click={() => (showCardContents = !showCardContents)} 
+    on:keypress={() => {}} 
+    tabindex="0"
+  >
     <p class="card-header-title">Headings</p>
     <button
       class="card-header-icon"
       aria-label="more options"
-      on:click={() => (showHeadings = !showHeadings)}
+      on:click={() => (showCardContents = !showCardContents)}
     >
       <span class="icon">
         <span class="material-icons-sharp is-size-4">
-          {#if showHeadings}
+          {#if showCardContents}
             expand_more
           {:else}
             expand_less
@@ -70,7 +76,7 @@ h6 {
       </span>
     </button>
   </header>
-  {#if showHeadings}
+  {#if showCardContents}
     <div class="card-content">
       <div class="content">
         <h1>H1 Headline H1</h1>

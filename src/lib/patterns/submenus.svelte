@@ -10,7 +10,13 @@
 <li>
   <!-- svelte-ignore a11y-missing-attribute -->
   <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <a class="has-icon has-dropdown-icon" on:click={toggleDropdown}>
+  <a 
+    class="has-icon has-dropdown-icon" 
+    role="button" 
+    on:click={toggleDropdown} 
+    tabindex="0" 
+    href="/components/sub"
+  >
     <span class="icon">
       <span class="material-icons-sharp is-size-6">view_list</span>
     </span>

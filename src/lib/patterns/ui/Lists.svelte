@@ -1,8 +1,8 @@
 <script lang="ts">
   import CardFooter from '$lib/CardFooter.svelte'
-  let showLists = true
+  let showCardContents = true
 
-  // Headings
+  // Lists
   const codeHTML = `<ul>
   <li>One</li>
   <li>Two</li>
@@ -22,16 +22,22 @@
 
 <!-- Lists -->
 <div class="card">
-  <header class="card-header">
+  <header 
+    class="card-header" 
+    role="button" 
+    on:click={() => (showCardContents = !showCardContents)} 
+    on:keypress={() => {}} 
+    tabindex="0"
+  >
     <p class="card-header-title">Lists</p>
     <button
       class="card-header-icon"
       aria-label="more options"
-      on:click={() => (showLists= !showLists)}
+      on:click={() => (showCardContents = !showCardContents)}
     >
       <span class="icon">
         <span class="material-icons-sharp is-size-4">
-          {#if showLists}
+          {#if showCardContents}
             expand_more
           {:else}
             expand_less
@@ -40,7 +46,7 @@
       </span>
     </button>
   </header>
-  {#if showLists}
+  {#if showCardContents}
     <div class="card-content">
       <div class="content is-flex is-justify-content-space-evenly">
         <span style="width: 200px;">

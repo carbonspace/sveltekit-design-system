@@ -1,8 +1,8 @@
 <script lang="ts">
   import CardFooter from '$lib/CardFooter.svelte'
+  let showCardContents = true
 
-  let showInlineElements = true
-  // Lists
+  // Inline
   const codeHTML = `<a href="#!">This is a text link</a>
 
 <strong>Strong is used to indicate strong importance.</strong>
@@ -44,16 +44,22 @@ The time element:
 
 <!-- Lists -->
 <div class="card">
-  <header class="card-header">
+  <header 
+    class="card-header" 
+    role="button" 
+    on:click={() => (showCardContents = !showCardContents)} 
+    on:keypress={() => {}} 
+    tabindex="0"
+  >
     <p class="card-header-title">Inline Elements</p>
     <button
       class="card-header-icon"
       aria-label="more options"
-      on:click={() => (showInlineElements = !showInlineElements)}
+      on:click={() => (showCardContents = !showCardContents)}
     >
       <span class="icon">
         <span class="material-icons-sharp is-size-4">
-          {#if showInlineElements}
+          {#if showCardContents}
             expand_more
           {:else}
             expand_less
@@ -62,7 +68,7 @@ The time element:
       </span>
     </button>
   </header>
-  {#if showInlineElements}
+  {#if showCardContents}
     <div class="card-content">
       <div class="content">
         <p><a href="#!">This is a text link</a>.</p>

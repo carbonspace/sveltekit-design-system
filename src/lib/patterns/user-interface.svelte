@@ -8,7 +8,14 @@
 </script>
 
 <li>
-	<a class="has-icon has-dropdown-icon" on:click={toggleDropdown} on:keypress="{() => {}}" role="button" tabindex="-1" href="#!">
+	<a 
+		class="has-icon has-dropdown-icon" 
+		on:click={toggleDropdown} 
+		on:keypress="{() => {}}" 
+		role="button" 
+		tabindex="-1" 
+		href="/components/ui"
+	>
 		<span class="icon has-update-mark">
 			<span class="material-icons-sharp is-size-6">view_list</span>
 		</span>

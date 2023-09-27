@@ -9,7 +9,12 @@
 <li>
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <!-- svelte-ignore a11y-missing-attribute -->
-  <a class="has-icon has-dropdown-icon" on:click={toggleDropdown} role="button" tabindex="-1">
+  <a class="has-icon has-dropdown-icon" 
+    on:click={toggleDropdown} 
+    role="button" 
+    tabindex="-1" 
+    href="/components/forms"
+  >
     <span class="icon">
       <span class="material-icons-sharp is-size-6">dynamic_form</span>
     </span>

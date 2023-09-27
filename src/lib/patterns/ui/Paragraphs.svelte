@@ -1,8 +1,8 @@
 <script lang="ts">
   import CardFooter from '$lib/CardFooter.svelte'
-  let showParagraphs = true
+  let showCardContents = true
 
-  // Headings
+  // Paragraphs
   const codeHTML = `<p>But on this most auspicious of nights, permit me then, in lieu of the more commonplace 
 soubriquet, to suggest the character of this dramatis persona. Voila! In view humble 
 vaudevillian veteran, cast vicariously as both victim and villain by the vicissitudes 
@@ -20,16 +20,22 @@ it's my very good honour to meet you and you may call me V.</p>`
 
 <!-- Paragraphs -->
 <div class="card">
-  <header class="card-header">
+  <header 
+    class="card-header" 
+    role="button" 
+    on:click={() => (showCardContents = !showCardContents)} 
+    on:keypress={() => {}} 
+    tabindex="0"
+  >
     <p class="card-header-title">Paragraphs</p>
     <button
       class="card-header-icon"
       aria-label="more options"
-      on:click={() => (showParagraphs= !showParagraphs)}
+      on:click={() => (showCardContents= !showCardContents)}
     >
       <span class="icon">
         <span class="material-icons-sharp is-size-4">
-          {#if showParagraphs}
+          {#if showCardContents}
             expand_more
           {:else}
             expand_less
@@ -38,7 +44,7 @@ it's my very good honour to meet you and you may call me V.</p>`
       </span>
     </button>
   </header>
-  {#if showParagraphs}
+  {#if showCardContents}
     <div class="card-content">
       <div class="content">
         <p>But on this most auspicious of nights, permit me then, in lieu of the more commonplace 

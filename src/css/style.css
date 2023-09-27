@@ -245,7 +245,8 @@ fieldset[disabled] .file-name, fieldset[disabled] .select select, .select fields
   padding: 0;
 }
 
-/* Bulma Base */ /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+/* Bulma Base */
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
 p,
@@ -1503,8 +1504,8 @@ a.box:active {
 }
 .button.is-loading::after {
   position: absolute;
-  left: calc(50% - (1em * 0.5));
-  top: calc(50% - (1em * 0.5));
+  left: calc(50% - 1em * 0.5);
+  top: calc(50% - 1em * 0.5);
   position: absolute !important;
 }
 .button.is-static {
@@ -9767,8 +9768,11 @@ aside.aside .aside-tools {
   color: hsl(0, 0%, 100%);
   line-height: 3.25rem;
   height: 3.25rem;
-  padding-left: 0.75rem;
+  padding-left: 1.5rem;
   flex: 1;
+}
+aside.aside .aside-tools .aside-tools-label {
+  font-size: 1.5rem;
 }
 aside.aside .aside-tools .icon {
   margin-right: 0.75rem;
@@ -9913,6 +9917,9 @@ section.hero.is-hero-bar .hero-body .button.is-hero-button:hover {
 }
 .card.is-card-widget .card-content {
   padding: 0.75rem;
+}
+.card .card-header {
+  cursor: pointer;
 }
 .card .card-header,
 .card .card-footer {

@@ -3,7 +3,7 @@
 </script>
 
 <li>
-  <a href="#/components/widgets" class="has-icon">
+  <a href="/components/widgets" class="has-icon">
     <span class="icon">
       <span class="material-icons-sharp is-size-6">person_pin</span>
     </span>

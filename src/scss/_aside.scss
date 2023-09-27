@@ -53,8 +53,12 @@ aside.aside {
     color: $aside-tools-color;
     line-height: $navbar-height;
     height: $navbar-height;
-    padding-left: $default-padding * .5;
+    padding-left: $default-padding;
     flex: 1;
+
+    .aside-tools-label {
+      font-size: 1.5rem;
+    }
 
     .icon {
       margin-right: $default-padding * .5;
