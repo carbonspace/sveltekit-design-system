@@ -68,7 +68,6 @@ h6 {
     <button
       class="card-header-icon"
       aria-label="more options"
-      on:click={toggleCardContents}
     >
       <span class="icon">
         <span class="material-icons-sharp is-size-4">
