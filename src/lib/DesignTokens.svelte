@@ -3,14 +3,14 @@
   import AliasTokens from '../assets/alias_tokens.png'
   import ComponentTokens from '../assets/component_tokens.png'
 
-  let showIntro = false
-  let showInitialColor = false
-  let showBrandColor = false
-  let showFunctionalColor = false
-  let showNeutralColor = false
-  let showBackgroundColor = false
-  let showTextColor = false
-  let showBorderColor = false
+  let showIntro = true
+  let showInitialColor = true
+  let showBrandColor = true
+  let showFunctionalColor = true
+  let showNeutralColor = true
+  let showBackgroundColor = true
+  let showTextColor = true
+  let showBorderColor = true
   let showFont = true
   let showFontWeight = true
   let showFontSize = true
@@ -189,7 +189,7 @@
   ]
 </script>
 
-<section class="section is-title-bar">
+<section class="section is-title-bar" style="display: none;">
   <div class="level">
     <div class="level-left">
       <div class="level-item">

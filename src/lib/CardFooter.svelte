@@ -1,26 +1,22 @@
-<script>
-  // @ts-nocheck
-  
+<script lang="ts">
     import Prism from "prismjs"
-    import "prism-svelte"
-  
-    // Initialize
-    export let codeHTML
-    export let codeCSS
-    export let codeJS
-    export let showCodeHTML = false
-    export let showCodeCSS = false
-    export let showCodeJS = false
-  
-    // Active SVG
+    import "prism-svelte"  
+    // Active-SVG
     import htmlBrand from '../assets/html5.svg'  
     import cssBrand from '../assets/css3.svg'  
     import jsBrand from '../assets/javascript.svg'
-  
-    // Inactive SVG
+    // Inactive-SVG
     import htmlBrandInactive from '../assets/html5-inactive.svg'
     import cssBrandInactive from '../assets/css3-inactive.svg'
     import jsBrandInactive from '../assets/javascript-inactive.svg'
+
+    // Initialize
+    export let codeHTML: string
+    export let codeCSS: string
+    export let codeJS: string
+    export let showCodeHTML: boolean = false
+    export let showCodeCSS: boolean = false
+    export let showCodeJS: boolean = false
   
     // Render HTML
     export const highlightedHTML = Prism.highlight(
@@ -46,7 +42,7 @@
     /**
        * @param {string} code
     */
-    function viewCode(code, showSnip) {
+    function viewCode(code: string, showSnip: string) {
       if (code != '') {
         // console.log(code);
         if (showSnip == 'HTML') {
@@ -66,12 +62,12 @@
       switch(e.keyCode) {
         // Arrow Up
         case 38:
-          console.log('Arrow Down')
+          console.log('Arrow Up')
           // dynamically call viewCode() with HTML, CSS or JS as the showSnip param
           break;
         // Arrow Down
         case 40:
-          console.log('Arrow Up'); 
+          console.log('Arrow Down'); 
           break;
       }
     }
@@ -83,11 +79,11 @@
       <img src={codeHTML != '' ? htmlBrand : htmlBrandInactive} class="card-footer-item-logo" alt="HTML" />
     </button>
     <button class="card-footer-item {codeCSS != '' ? '' : 'inactive'}" 
-      on:click={viewCode(codeHTML, 'CSS')}>
+      on:click={viewCode(codeCSS, 'CSS')}>
       <img src={codeCSS != '' ? cssBrand : cssBrandInactive} class="card-footer-item-logo" alt="CSS" />
     </button>
     <button class="card-footer-item {codeJS != '' ? '' : 'inactive'}" 
-      on:click={viewCode(codeHTML, 'JS')}>
+      on:click={viewCode(codeJS, 'JS')}>
       <img src={codeJS != '' ? jsBrand : jsBrandInactive} class="card-footer-item-logo" alt="JS" />
   </button>
   </footer>
@@ -117,19 +113,23 @@
     button {
       cursor: pointer;
     }
+
     button.inactive {
       border: none;
     }
+
     .card-footer-item,
     .card-footer-item:link,
     .card-footer-item:visited,
     .card-footer-item.inactive:hover {
       background-color: #fff;
     }
+
     .card-footer-item:hover,
     .card-footer-item:active {
       background-color: #f5f5f5;
     }
+    
     .card-footer-item:active {
       background-color: #f1f1f1;
     }

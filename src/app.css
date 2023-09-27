@@ -2,6 +2,14 @@
   --inactive-color: blue;
 }
 
+html {
+  font-size: 18px !important;
+}
+
+body {
+  font-size: 1rem !important;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -12,10 +20,10 @@
 
 /* Card */
 .card-content {
-  padding: 1rem;
+  padding: 2rem !important;
 }
 .card-content.flat {
-  padding: 0;
+  padding: 0 !important;
 }
 .card-footer-item.inactive {
   cursor: not-allowed;

@@ -1,6 +1,11 @@
 <script lang="ts">
-	import CardFooter from "$lib/CardFooter.svelte";
+	import CardFooter from "$lib/CardFooter.svelte"
+  
   let showCardContents = true
+
+  async function toggleCardContents() {
+    showCardContents = !showCardContents
+  }
   
   // Headings
   const codeHTML = `<h1>H1 Headline H1</h1>
@@ -55,7 +60,7 @@ h6 {
   <header 
     class="card-header" 
     role="button" 
-    on:click={() => (showCardContents = !showCardContents)} 
+    on:click={toggleCardContents} 
     on:keypress={() => {}} 
     tabindex="0"
   >
@@ -63,7 +68,7 @@ h6 {
     <button
       class="card-header-icon"
       aria-label="more options"
-      on:click={() => (showCardContents = !showCardContents)}
+      on:click={toggleCardContents}
     >
       <span class="icon">
         <span class="material-icons-sharp is-size-4">

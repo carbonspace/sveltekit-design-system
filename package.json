@@ -2,7 +2,7 @@
 	"name": "design-system",
 	"version": "0.0.1",
 	"description": "a design system",
-	"author" : "dmaskew",
+	"author": "dmaskew",
 	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",
@@ -51,7 +51,10 @@
 		"tslib": "^2.6.2",
 		"typescript": "^5.2.2",
 		"vite": "^4.4.9",
-		"vitest": "^0.34.5"	
+		"vitest": "^0.34.5"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@types/prismjs": "^1.26.1"
+	}
 }
